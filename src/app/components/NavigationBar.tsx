@@ -6,6 +6,10 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+// import Link from "@mui/material/Link";
+// import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
+import { Link } from "@mui/material";
 
 export default function NavigationBar() {
   return (
@@ -22,9 +26,51 @@ export default function NavigationBar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+            <Link
+              component={RouterLink}
+              to="/"
+              sx={{ color: "inherit", textDecoration: "none" }}
+            >
+              Logo
+            </Link>
           </Typography>
-          <Button color="inherit">Login</Button>
+
+          <Button color="inherit">
+            <Link
+              component={RouterLink}
+              to="/home"
+              sx={{ color: "inherit", textDecoration: "none" }}
+            >
+              Home
+            </Link>
+          </Button>
+          <Button color="inherit">
+            <Link
+              component={RouterLink}
+              to="/about"
+              sx={{ color: "inherit", textDecoration: "none" }}
+            >
+              About
+            </Link>
+          </Button>
+          <Button color="inherit">
+            <Link
+              component={RouterLink}
+              to="/dashboard"
+              sx={{ color: "inherit", textDecoration: "none" }}
+            >
+              Dashboard
+            </Link>
+          </Button>
+          <Button color="inherit">
+            <Link
+              component={RouterLink}
+              to="/login"
+              sx={{ color: "inherit", textDecoration: "none" }}
+            >
+              Login
+            </Link>
+          </Button>
         </Toolbar>
       </AppBar>
     </Box>

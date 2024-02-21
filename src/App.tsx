@@ -1,10 +1,12 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./app/views/pages/Home";
+import { BrowserRouter } from "react-router-dom";
+
 import RouteCollection from "./app/RouteCollection";
+import NavigationBar from "./app/components/NavigationBar";
 
 function App() {
   return (
     <BrowserRouter>
+      <NavigationBar />
       <RouteCollection />
     </BrowserRouter>
   );
